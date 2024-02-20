@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+section {
+    margin-left: 200px;
+    .image-grid-container {
+        margin: 0 auto; // Center the container horizontally
+        max-width: 1200px; // Add a max-width
+        padding: 0 20px; // Add margins from left and right
+
+        .image-grid {
+            margin: 0 auto; // Center the grid
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 30px; // Gap between images
+
+            .outer{
+                display: flex;
+                flex-direction: column;
+                .image-item {
+                    overflow: hidden;
+                    border: 5px solid white; // White border around each image
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: auto; // Allow the container to adjust dynamically based on content
+                    height: auto;
+                    background-color: azure;
+    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+                .image-name {
+                    margin-top: 5px; // Add spacing between image and text
+                    text-align: center; // Center the text
+                    font-size: 18px; // Adjust font size as needed
+                    font-family: "Titillium Web", sans-serif;
+                    font-weight: 300;
+                    font-style: normal;
+                    text-decoration: none;
+                }
+                .image-name:hover{
+                    text-decoration: underline;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    section {
+        margin-left: 0;
+    }
+
+}
