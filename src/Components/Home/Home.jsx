@@ -29,7 +29,7 @@ const data = [
   }
 ]
   const getWhatsAppLink = (phoneNumber) => {
-    return `https://wa.me/${phoneNumber}`; // WhatsApp URL with phone number
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hi, I want to join♥♥")}`; // WhatsApp URL with phone number
 };
 
 const Home = () => {
