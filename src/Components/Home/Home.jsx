@@ -39,9 +39,9 @@ const Home = () => {
     <div className="image-grid">
       {data.map(({ id, img, name,phoneNumber }, index) => (
         <div className='outer'>
-        <div key={index} className="image-item">
+        <a href={getWhatsAppLink(phoneNumber)} key={index} className="image-item">
           <img src={img} />
-        </div>
+        </a>
         <a href={getWhatsAppLink(phoneNumber)} className="image-name">{name}</a>
         </div>
       ))}
